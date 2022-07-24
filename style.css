@@ -1,0 +1,12 @@
+
+
+body {
+    background-color: blue;
+  } 
+
+  .wall {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(192, 10, 10);
+    border: 2px solid black;
+  }
