@@ -2,11 +2,43 @@
 
 body {
     background-color: blue;
+
   } 
 
-  .wall {
+  nav{
+    text-align: center;
+  }
+
+  main > div {
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .box{
     height: 50px;
     width: 50px;
+    display: inline-block;
+  }
+ 
+  .wall { 
     background-color: rgb(192, 10, 10);
     border: 2px solid black;
+}
+
+  .coint{
+    background-color: gold;
+    border-radius: 50%;
+    transform: scale(30%);
+  }
+
+  .pacman {
+    background: url(assets/imige/pacman_left.jpeg);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .row1 {
+    display: inline-block;
+    /* display: inline-flex; */
   }
