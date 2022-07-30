@@ -1,137 +1,125 @@
-let gameData = [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1],
-    [1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1],
-    [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1],
-    [1, 2, 2, 2, 1, 1, 5, 1, 1, 2, 2, 2, 1],
-    [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1],
-    [1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1],
-    [1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-  ]; 
-
-  const WALL   = 1;
-  const COIN   = 2;
-  const GROUND = 3;
-  const PACMAN = 5;
-
-  let map;
-  
 
 
-  let pacman = {
-    x: 6,
-    y: 4,
-    direction: 'right'
-  };
+let gameLayout = [
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 5, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+];
+
+const BRICK  = 1;
+const COIN   = 2;
+const GROUND = 3;
+const PACMAN = 5;
+
+let map;
+
+let pacman = {
+  x: 6,
+  y: 4,
+  move: 'right'
+};
 
 
-  function createTiles(data) {
+function createBoxs(layout) {
+  let boxsArray = [];
 
-    let tilesArray = [];
-  
-    for (let row of data) {
-      for (let col of row) {
+  for (let row of layout) {
+  for (let col of row) {
 
-        let tile = document.createElement('div');
-        tile.classList.add('tile');
-  
-        if (col === WALL) {
-          tile.classList.add('wall');
-  
-        } else if (col === COIN) {
-          tile.classList.add('coin');
-  console.log(col);
-        } else if (col === GROUND) {
-          tile.classList.add('ground');
-  
-        } else if (col === PACMAN) {
-          tile.classList.add('pacman');
-          tile.classList.add(pacman.direction);
-  
-        }
-  
-        tilesArray.push(tile);
+      let box = document.createElement('div');
+      box.classList.add('box');
+
+      if (col ===BRICK) {
+        box.classList.add('brick');
+
+      }else if (col === COIN) {
+        box.classList.add('coin');
+
+      }else if (col === GROUND) {
+        box.classList.add('ground');
+
+      }else if (col === PACMAN){
+        box.classList.add('pacman');
+        box.classList.add(pacman.move);
       }
-  
-      let brTile = document.createElement('br');
-      tilesArray.push(brTile);
+
+      boxsArray.push(box);
     }
-  
-    return tilesArray;
-  }
 
-
-  function drawMap() {
-    map = document.createElement('div');
-  
-    let tiles = createTiles(gameData);
-    for (let tile of tiles) {
-      map.appendChild(tile);
-    }
-  
-    document.body.appendChild(map);
+    let brBox = document.createElement('br');
+    boxsArray.push(brBox);
   }
- 
- 
-  
-   
-
-  function moveRight(){
-    pacman.direction = "right";
-    if (gameData[pacman.y] [pacman.x+1] !== WALL) {
-      gameData[pacman.y][pacman.x] = GROUND;
-      pacman,x = pacman.x +1;
-      gameData[pacman.y][pacman.x] = PACMAN;
-  }
+  return boxsArray;
 }
 
-function moveLeft(){
-  pacman.direction = "left";
-  if (gameData[pacman.y] [pacman.x - 1] !== WALL) {
-    gameData[pacman.y][pacman.x] = GROUND;
-    pacman,x = pacman.x - 1;
-    gameData[pacman.y][pacman.x] = PACMAN;
+function drowMap() {
+  map = document.createElement('div');
+
+  let boxs = createBoxs(gameLayout);
+  for (let box of boxs) {
+    map.appendChild(box);
   }
+
+   document.body.appendChild(map);  
 }
+
+function eraseMap() {
+  document.body.removeChild(map);
+}
+
+// !=="not equal value or type" Pacman can't go through bricks 
 
 function moveUp(){
-  pacman.direction = "up";
-  if (gameData[pacman.y- 1] [pacman.x ] !== WALL) {
-    gameData[pacman.y][pacman.x] = GROUND;
-    pacman,y = pacman.y - 1;
-    gameData[pacman.y][pacman.x] = PACMAN;
+  pacman.move = 'up';
+  if (gameLayout [pacman.y-1][pacman.x] !== BRICK) {
+    gameLayout [pacman.y][pacman.x] = GROUND;
+    pacman.y = pacman.y-1;
+    gameLayout [pacman.y-1][pacman.x] = PACMAN;
   }
 }
 
 function moveDown(){
-  pacman.direction = "down";
-  if (gameData[pacman.y + 1] [pacman.x ] !== WALL) {
-    gameData[pacman.y][pacman.x] = GROUND;
-    pacman,y = pacman.y + 1;
-    gameData[pacman.y][pacman.x] = PACMAN;
+  pacman.move = 'up';
+  if (gameLayout [pacman.y+1][pacman.x] !== BRICK) {
+    gameLayout [pacman.y][pacman.x] = GROUND;
+    pacman.y = pacman.y+1;
+    gameLayout [pacman.y+1][pacman.x] = PACMAN;
   }
 }
 
-function controle(){
-  document.addEventListener("keydown", function(e){
-    if (e.keyCode === 37){
-      moveLeft();
-      } else if (e.keyCode === 38){
-        moveUp();
-    } else if (e.keyCode === 39){
-      moveRight();
-      } else if (e.keyCode === 40){
-        moveDown();
-        }
-  });
+function moveRight(){
+  pacman.move = 'up';
+  if (gameLayout [pacman.y][pacman.x+1] !== BRICK) {
+    gameLayout [pacman.y][pacman.x+1] = GROUND;
+    pacman.y = pacman.y;
+    gameLayout [pacman.y][pacman.x+1] = PACMAN;
+  }
 }
 
-
-
-function main(){
-  drawMap();
-  controle();
+function moveRight(){
+  pacman.move = 'up';
+  if (gameLayout [pacman.y][pacman.x-1] !== BRICK) {
+    gameLayout [pacman.y][pacman.x-1] = GROUND;
+    pacman.y = pacman.y;
+    gameLayout [pacman.y][pacman.x-1] = PACMAN;
+  }
 }
 
-main();
+function setUpContols(){
+  document.addEventListener('keydown', function(e) {
+    if (e.keyCode === 37 || )
+  })
+}
+
+// eraseMap();
+drowMap();
+gamePlay();
