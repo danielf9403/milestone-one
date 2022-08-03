@@ -10,7 +10,7 @@ body {
 }
 
 body > div {
-  margin: 100px auto;
+  margin: 10px auto;
   text-align: center;
 }
 
@@ -49,4 +49,13 @@ body > div {
 
 .down {
   background-image: url(assets/imige/pacman_down.jpeg) ;
+}
+
+span {
+  
+  position:relative;
+  width: 100px;
+  height: 50px;
+  
+  
 }
