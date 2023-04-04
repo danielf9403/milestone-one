@@ -1,35 +1,68 @@
 
 
 let gameLayout = [
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
-  [1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1],
-  [1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1],
-  [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1],
-  [1, 2, 1, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 2, 1, 2, 2, 1, 1, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1],
-  [1, 2, 1, 2, 2, 1, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
-  [1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
 
 const BRICK  = 1;
 const COIN   = 2;
 const GROUND = 3;
 const PACMAN = 5;
-const eatenCoin = 10;
 
-// var scoreDisplay = documentGetElementById('score');
 
-let map;
-let score=3;
+let map
+let score=0;
+let brBox
+let box
+
+function setup()
+{
+  createCanvas(windowWidth, windowHeight);
+  scoreDisplay.textContent = score;
+  brBox = frameElement('br');
+  box = frameElement('div');
+  box.id = 'box';
+  box.style.position = 'absolute';
+  box.style.left = '0px';
+  box.style.top = '0px';
+  box.style.width = '100%';
+  box.style.height = '100%';
+  box.style.backgroundColor = 'black';
+  box.style.opacity = '0.5';
+  document.body.appendChild(box);
+  map = new Map();
+  for (let i = 0; i < BRICK.length; i++)
+  {
+    let brick = frameElement('div');
+    brick.id = 'brick' + i;
+    brick.style.position = 'absolute';
+    brick.style.left = '0px';
+    brick.style.top = '0px';
+    brick.style.width = '100%';
+    brick.style.height = '100%';
+    brick.style.backgroundColor = 'black';
+    brick.style.opacity = '0.5';
+    box.appendChild(brick);
+    map.set(brick[i], brick);
+    brick.addEventListener('click', brickClicked);
+  }
+}
+
 
 
 let pacman = {
@@ -62,7 +95,6 @@ function createBoxs(layout) {
         box.classList.add(pacman.move);
 
       }
-
       boxsArray.push(box);
     }
 
@@ -100,8 +132,8 @@ function moveDown(){
   console.log(gameLayout[pacman.y+1][pacman.x])
 
   if (gameLayout[pacman.y+1][pacman.x] === 2) {
-    score += eatenCoin;
-  
+    
+    updateScore(score);
   }
   if (gameLayout[pacman.y+1][pacman.x] !== 1) {
     gameLayout[pacman.y][pacman.x] = 3;
@@ -110,12 +142,14 @@ function moveDown(){
     
   }
   console.log(score, 'line 110');
+  
 }
 
 function moveUp(){
   pacman.move = 'up';
   if (gameLayout[pacman.y-1][pacman.x] === 2) {
-    score += eatenCoin;
+    
+    updateScore(score);
   }
   if (gameLayout [pacman.y-1][pacman.x] !== 1) {
     gameLayout [pacman.y][pacman.x] = 3;
@@ -123,14 +157,15 @@ function moveUp(){
     gameLayout [pacman.y][pacman.x] = 5;
   }
   console.log(score);
+  
 }
 
 
 function moveRight(){
   pacman.move = 'rigth';
   if (gameLayout[pacman.y][pacman.x +1] === 2) {
-    score += eatenCoin;
-    score.innerHTML = score
+    
+    updateScore(score);
   }
   if (gameLayout [pacman.y][pacman.x + 1] !== 1) {
     gameLayout [pacman.y][pacman.x] = 3;
@@ -138,12 +173,14 @@ function moveRight(){
     gameLayout [pacman.y][pacman.x] = 5;
   }
   console.log(score);
+  
 }
 
 function moveLeft(){
   pacman.move = 'left';
   if (gameLayout[pacman.y][pacman.x - 1] === 2) {
-    score += eatenCoin;
+    
+    updateScore(score);
   }
   if (gameLayout [pacman.y][pacman.x - 1] !== 1) {
     gameLayout [pacman.y][pacman.x] = 3;
@@ -151,6 +188,8 @@ function moveLeft(){
     gameLayout [pacman.y][pacman.x] = 5;
   }
   console.log(score);
+  
+  
 }
 
 function setUpContols(){
@@ -173,25 +212,37 @@ function setUpContols(){
   })
 }
 
+// function to display the score
+function displayScore() {
+  const score = document.getElementById("score");
+  score.innerText = `Score: ${score}`;
+}
+
+function updateScore() {
+  score++;
+  var scoreElement = document.getElementById("score");
+  scoreElement.innerHTML = score;
+}
 
 
-   function setUpScores() {
+//    function setUpScores() {
     
-    let scoreDisplay= documentGetElementById("score");
-     if(pacman.move === 2) { 
-      score.innerHTML = score
-      scoreDisplay.innerHTML
-     }
-map
-   }
+//     let scoreDisplay= documentGetElementById("score");
+//      if(pacman.move === 2) { 
+//       score.innerHTML = score
+//       scoreDisplay.innerHTML
+//      }
+// map
+//    }
 
 function main(){
   setUpContols()
   drowMap();
-   setUpScores()
- 
+  gamePlay();
+  setup();
+  updateScore();
+  displayScore();
 }
 // eraseMap();
-// drowMap();
-// gamePlay();
+// 
 main();
