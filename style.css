@@ -10,17 +10,17 @@
   }
 }
 
-/* html {
+html {
   box-sizing: border-box;
-} */
-/* *, *:before, *:after {
+}
+ *, *:before, *:after {
   box-sizing: inherit;
-} */
+} 
 
 body {
   background-color: blue;
   line-height: 1.5;
-  width:max-content;
+  
 }
 
 body > div {
